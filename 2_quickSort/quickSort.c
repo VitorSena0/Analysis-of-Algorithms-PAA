@@ -135,6 +135,7 @@ void quickSortLomutoAleatorio(int arr[], int baixo, int alto) {
 }
 
 //----------------[ Função de particionamento Hoare ]----------------
+
 int particionaHoare(int arr[], int baixo, int alto) {
     int pivo = arr[baixo];  // Assume que o pivô está na posição inicial
     int i = baixo - 1;
@@ -163,6 +164,7 @@ void quickSortHoare(int arr[], int baixo, int alto) {
 }
 
 //----------------[ Função de particionamento Hoare com mediana de três ]----------------
+
 int particionaHoareV2(int arr[], int baixo, int alto) {
     int pivo = arr[baixo];  // Assume que o pivô está na posição inicial
     int i = baixo - 1;

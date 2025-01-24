@@ -132,7 +132,7 @@ void processarDocumentos(char *input, char *output){
     FilaContainerCNPJ *auxCNPJ = filaCNPJ;
   while (auxCNPJ != NULL) {
       if (auxCNPJ->container != NULL) {
-          fprintf(arqOutput, "%s: %s<->%s\n", auxCNPJ->container->codigo, auxCNPJ->container->cnpj, auxCNPJ->cnpj);
+          fprintf(arqOutput, "%s:%s<->%s\n", auxCNPJ->container->codigo, auxCNPJ->container->cnpj, auxCNPJ->cnpj);
       }
       auxCNPJ = auxCNPJ->ProxContainer;
   }
@@ -140,7 +140,7 @@ void processarDocumentos(char *input, char *output){
 
     FilaContainerPeso *auxPeso = filaPeso;
     while (auxPeso != NULL) {
-        fprintf(arqOutput, "%s: %dkg (%d%%)\n", auxPeso->container->codigo, auxPeso->diferencaPeso, auxPeso->porcentagemPeso);
+        fprintf(arqOutput, "%s:%dkg(%d%%)\n", auxPeso->container->codigo, auxPeso->diferencaPeso, auxPeso->porcentagemPeso);
         auxPeso = auxPeso->ProxContainer;
     }
 

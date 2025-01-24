@@ -11,7 +11,7 @@
 // Função de intercalação para combinar dois subarrays ordenados
 void intercalar(int *array, int inicio, int meio, int fim, int *temp) {
     int i = inicio, j = meio + 1, k = 0; // O k é o índice do array temporário
-    // Intercala os dois subarrays ordenados
+    // Intercala os dois subarrays ordenados ou seja, combina os dois subarrays em um array ordenado
     // Complexidade O(n)
     while (i <= meio && j <= fim) {
         if (array[i] <= array[j])// Complexidade O(1)
