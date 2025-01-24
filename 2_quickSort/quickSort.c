@@ -296,7 +296,7 @@ void processarDocumentos(char *arqInput, char *arqOutput) {
         }
 
         // Executa os algoritmos de ordenação
-        fprintf(outputArq, "%d: N(%d) ", i, tamanhoLista);
+        fprintf(outputArq, "%d:N(%d)", i, tamanhoLista);
         // O memcpy é usado para copiar o array original para o array temporário
         memcpy(tempArray, arrayOriginal, tamanhoLista * sizeof(int));
         executarOrdenacao(quickSortLomuto, tempArray, tamanhoLista, "LP", outputArq, SortTrocaMaisChamada, 0);
@@ -331,7 +331,7 @@ void processarDocumentos(char *arqInput, char *arqOutput) {
                 fprintf(outputArq, "%s(%d)", SortTrocaMaisChamada[i].siglaAlgoritmo, SortTrocaMaisChamada[i].trocasEsomas);
                 break;
             }
-            fprintf(outputArq, "%s(%d) ", SortTrocaMaisChamada[i].siglaAlgoritmo, SortTrocaMaisChamada[i].trocasEsomas);
+            fprintf(outputArq, "%s(%d),", SortTrocaMaisChamada[i].siglaAlgoritmo, SortTrocaMaisChamada[i].trocasEsomas);
         }
 
         fprintf(outputArq, "\n");
