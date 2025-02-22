@@ -224,6 +224,9 @@ void processarArquivo(char *entrada, char *saida){
         perror("Erro ao alocar os veiculos");
         exit(EXIT_FAILURE);
     }
+
+    printf("Numero de veiculos: %d\n", numeroVeiculos);
+    
     for (int i = 0; i < numeroVeiculos; i++) {
         int pesoLim, volLim;
         fscanf(arquivoEntrada, "%s %d %d", vetorVeiculos[i].placa, &pesoLim, &volLim);
@@ -238,6 +241,9 @@ void processarArquivo(char *entrada, char *saida){
         perror("Erro ao alocar os pacotes");
         exit(EXIT_FAILURE);
     }
+
+    printf("Numero de pacotes: %d\n", quantidadeTotalPacotes);
+    
     for (int i = 0; i < quantidadeTotalPacotes; i++) {
         fscanf(arquivoEntrada, "%s %f %d %d", 
                todosPacotes[i].codigo, &todosPacotes[i].valor,
