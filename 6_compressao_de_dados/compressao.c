@@ -187,6 +187,7 @@ static No *extrairMin(MinHeap *heap) {
     return temp;
 }
 
+
 //----------------[ Troca ponteiros de nós ]----------------
 static void troca(No **a, No **b) {
     No *t = *a;
@@ -239,6 +240,7 @@ static No *construirArvoreHuffman(const int *frequencia) {
         interno->dir     = min2;
         inserirMinHeap(heap, interno);
     }
+    // Retorna a raiz da árvore
     No *raiz = extrairMin(heap);
     free(heap->array);
     free(heap);
